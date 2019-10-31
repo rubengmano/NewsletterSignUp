@@ -11,6 +11,9 @@ const port = 3000;
 // Create the express app
 const app = express();
 
+// Give access to static files such as images and css stylesheet
+app.use(express.static("public"));
+
 // Set the body parser to be abled to read
 app.use(bodyParser.urlencoded({extended: true}));
 
